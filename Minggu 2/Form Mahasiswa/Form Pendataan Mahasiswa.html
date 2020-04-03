@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Form </title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: arial;
+      }
+
+      .judul h2{
+        text-align: center;
+      }
+
+      .row .kiri{
+        background-color:#EFEFEF;
+        float: left;
+        position: relative;
+        width: 32%;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .row .kiri pre{
+        font-size: 14px;
+        font-family: arial;
+        line-height: 1.5;
+        margin-bottom: 7px;
+      }
+
+      .row .kiri .form input{
+        width: 330px;
+        height: 30px;
+        border-radius: 5px;
+      }
+
+      .row .tengah{
+        background-color:#EFEFEF;
+        position: relative;
+        width: 32%;
+        padding: 10px;
+        margin-left: 450px;
+        border-radius: 5px;
+      }
+
+      .row .tengah pre{
+        font-size: 14px;
+        font-family: arial;
+        line-height: 1.5;
+        margin-bottom: 7px;
+      }
+
+      .row .tengah .form input{
+        width: 330px;
+        height: 30px;
+        border-radius: 5px;
+      }
+
+      .row .kanan{
+        background-color:#EFEFEF;
+        float: right;
+        position: relative;
+        width: 32%;
+        margin-top: -992px;
+        left: -8px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .row .kanan pre{
+        font-size: 14px;
+        font-family: arial;
+        line-height: 1.5;
+        margin-bottom: 7px;
+      }
+
+      .row .kanan .form input{
+        width: 330px;
+        height: 30px;
+        border-radius: 5px;
+      }
+
+      label{
+        font-size: 14px;
+        font-family: verdana;
+      }
+
+      .button{
+        position: relative;
+        margin-top: 10px;
+      }
+
+      .button input{
+        width: 120px;
+        height: 30px;
+        font-size: 16px;
+        color: green;
+        border-radius: 5px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form name = "fbiomhs" action = "form.php" method = "POST">
+
+      <div class="judul">
+        <h2>FORM PENDATAAN MAHASISWA</h2>
+      </div>
+
+      <div class="row">
+        <div class="kiri">
+          <pre>Fakultas
+          <b>Kesehatan</b></pre>
+          <div class="form">
+            <label>Jurusan</label><br>
+              <input type="text" name="fjurusan">
+            <br>
+            <br>
+            <label>Program Studi</label><br>
+              <input type="text" name="fprodi">
+            <br>
+            <br>
+            <label>Kode Mahasiswa*</label><br>
+              <input type="text" name="fkdmhs">
+            <br>
+            <br>
+            <label>Nama Mahasiswa*</label><br>
+              <input type="text" name="fnmmhs">
+            <br>
+            <br>
+            <label>NIK Mahasiswa (No KTP)*</label><br>
+              <input type="text" name="fnikmhs">
+            <br>
+            <br>
+            <label>No BPJS</label><br>
+              <input type="text" name="fnobpjs">
+            <br>
+            <br>
+            <label>Password</label><br>
+              <input type="text" name="fpass">
+            <br>
+            <br>
+            <label>Tahun Angkatan*</label><br>
+              <input type="text" name="fthnakt">
+            <br>
+            <br>
+            <label>Semester Masuk*</label><br>
+              <select name = "fsmtmasuk" style="width: 330px;height: 30px;border-radius: 5px;">
+                <option value = "null"></option>
+                <option value = "smt1">Semester 1</option>
+                <option value = "smt2">Semester 2</option>
+                <option value = "smt3">Semester 3</option>
+                <option value = "smt4">Semester 4</option>
+                <option value = "smt5">Semester 5</option>
+                <option value = "smt6">Semester 6</option>
+                <option value = "smt7">Semester 7</option>
+              <select>
+            <br>
+            <br>
+            <label>Dosen Pembimbing Akademik</label><br>
+              <input type="text" name="fdospem">
+            <br>
+            <br>
+            <label>No Telp Orangtua/Wali</label><br>
+              <input type="text" name="fnotelportu">
+            <br>
+            <br>
+            <label>No Hp Mahasiswa</label><br>
+              <input type="text" name="fnohpmhs">
+            <br>
+            <br>
+            <label>Email Aktif Mahasiswa</label><br>
+              <input type="text" name="femailmhs">
+            <br>
+            <br>
+            <label>Tempat Tinggal Saat Kuliah</label><br>
+              <select name = "ftmpttgl" style="width: 280px;height: 30px;border-radius: 5px;">
+                <option value = "null">--Pilih Jenis Tinggal--</option>
+                <option value = "kos">Indekos</option>
+                <option value = "ortu">Bersama Orangtua</option>
+                <option value = "wali">Bersama Saudara/Wali</option>
+                <option value = "lainnya">Lainnya</option>
+              <select>
+            <br>
+            <br>
+            <label>Jenis Kelamin</label><br>
+              <select name = "fjenkel" style="width: 330px;height: 30px;border-radius: 5px;">
+                <option value = "null"></option>
+                <option value = "pria">Pria</option>
+                <option value = "wanita">Wanita</option>
+              <select>
+            <br>
+          </div>
+        </div>
+        <div class="tengah">
+          <div class="form">
+            <label>Agama</label><br>
+              <select name = "fagama" style="width: 330px;height: 30px;border-radius: 5px;">
+                <option value = "null"></option>
+                <option value = "isl">Islam</option>
+                <option value = "kri">Kristen</option>
+                <option value = "kat">Katholik</option>
+                <option value = "hin">Hindu</option>
+                <option value = "bud">Budha</option>
+                <option value = "lainnya">Lainnya</option>
+              <select>
+            <br>
+            <br>
+            <label>Status Marital</label><br>
+              <select name = "fmarital" style="width: 330px;height: 30px;border-radius: 5px;">
+                <option value = "null"></option>
+                <option value = "pria">Menikah</option>
+                <option value = "wanita">Belum Menikah</option>
+              <select>
+            <br>
+            <br>
+            <label>Nama Gadis Ibu Kandung</label><br>
+              <input type="text" name="fnmgadisibu">
+            <br>
+            <br>
+            <label>Nama Ayah Kandung</label><br>
+              <input type="text" name="fnmayah">
+            <br>
+            <br>
+            <label>Tempat Lahir</label><br>
+              <input type="text" name="ftmptlahir">
+            <br>
+            <br>
+            <label>Tanggal Lahir</label><br>
+              <input type = "date" name = "ftgllahir" style="width: 150px">
+            <br>
+            <br>
+            <label>Kewarganegaraan</label><br>
+              <select name = "fwn" style="width: 330px;height: 30px;border-radius: 5px;">
+                <option value = "null"></option>
+                <option value = "pria">Indonesia</option>
+                <option value = "wanita">Asing</option>
+              <select>
+            <br>
+            <br>
+            <label>Alamat Asal</label><br>
+              <input type="text" name="falmtasal">
+            <br>
+            <br>
+            <label>RT/RW Asal</label><br>
+              <input type="text" name="frtasal" style="width: 50px">
+              <label> / </label>
+              <input type="text" name="frwasal" style="width: 50px">
+            <br>
+            <br>
+            <label>Desa/Kelurahan Asal</label><br>
+              <input type="text" name="fdesaasal">
+            <br>
+            <br>
+            <label>Kecamatan Asal</label><br>
+              <input type="text" name="fkecasal">
+            <br>
+            <br>
+            <label>Kota Asal</label><br>
+              <input type="text" name="fkotaasal">
+            <br>
+            <br>
+            <label>Kode Pos Asal</label><br>
+              <input type="text" name="fkdposasal">
+            <br>
+            <br>
+            <label>Provinsi Asal</label><br>
+              <input type="text" name="fprovasal">
+            <br>
+            <br>
+            <label>Negara Asal</label><br>
+              <input type="text" name="fnegaraasal">
+            <br>
+          </div>
+        </div>
+        <div class="kanan">
+          <div class="form">
+            <label>Alamat Sekarang</label><br>
+              <input type="text" name="almtskrg">
+            <br>
+            <br>
+            <label>RT/RW Sekarang</label><br>
+              <input type="text" name="frtskrg" style="width: 50px">
+              <label> / </label>
+              <input type="text" name="frwskrg" style="width: 50px">
+            <br>
+            <br>
+            <label>Desa/Kelurahan Sekarang</label><br>
+              <input type="text" name="fdesasekarang">
+            <br>
+            <br>
+            <label>Kecamatan Sekarang</label><br>
+              <input type="text" name="fkecsekarang">
+            <br>
+            <br>
+            <label>Kota Sekarang</label><br>
+              <input type="text" name="fkotaskrg">
+            <br>
+            <br>
+            <label>Kode Pos Sekarang</label><br>
+              <input type="text" name="fkdposskrg">
+            <br>
+            <br>
+            <label>Provinsi Sekarang</label><br>
+              <input type="text" name="fprovskrg">
+            <br>
+            <br>
+            <label>Transfer</label><br>
+              <select name = "ftrans" style="width: 80px;height: 30px;border-radius: 5px;">
+                <option value = "tidak">Tidak</option>
+                <option value = "ya">Ya</option>
+              <select>
+            <br>
+            <br>
+            <label>Jenis Pendaftaran</label><br>
+              <select name = "fjenpdftrn" style="width: 180px;height: 30px;border-radius: 5px;">
+                <option value = "null">-</option>
+                <option value = "reg">Reguler</option>
+                <option value = "pmdk">PMDK</option>
+              <select>
+            <br>
+            <br>
+            <label>Status</label><br>
+              <select name = "fstatus" style="width: 330px;height: 30px;border-radius: 5px;">
+                <option value = "null">Pilih</option>
+                <option value = "aktif">Aktif</option>
+                <option value = "mangkir">Mangkir</option>
+                <option value = "aktifkeu">Aktif Keuangan</option>
+              <select>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <input type = "submit" name = "fsubmit" value = "Simpan">
+        <input type = "submit" name = "fcancel" value = "Batal">
+      </div>
+
+    </form>
+  </body>
+</html>

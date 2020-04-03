@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas Layout CSS</title>
+	<style>
+		body{
+			font-family: Arial;
+			width: 960px;
+			background-color: #e4e4e4;
+			margin: auto;
+		}
+
+		.header{
+			background-image: url(space.jpg);
+			background-size: 50%;
+			text-align: center;
+			padding: 2px 10px;
+		}
+
+		.header h1 {
+			font-family: Arial;
+			font-size: 38px;
+			letter-spacing: 10px;
+			color: white;
+			text-shadow: 1px 2px #808080;
+			margin-bottom: -12px;
+		}
+
+		.header p {
+			font-family: cursive;
+			font-style: italic;
+			color: white;
+			margin-bottom: -60px;
+		}
+
+		.header img {
+			position: relative;
+  			left: 400px;
+  			top: -20px;
+  			width: 10%;
+		}
+
+		hr {
+			background: #f2f2f2;
+			border: 5px;
+			padding: 3px;
+			margin: 0;
+		}
+
+		.middle{
+			height: 800px;
+		}
+
+		.middle .sidebar{
+			background: #ccc;
+			float: left;	
+			width: 25%;
+			height: 100%;
+		}
+
+		.middle .sidebar ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			background-color: #f1f1f1;
+			overflow: auto;
+		}
+
+		.middle .sidebar li a {
+			display: block;
+			color: #000;
+			padding: 8px 16px;
+			text-decoration: none;
+		}
+
+		.middle .sidebar li a:hover {
+			background-color: #555;
+			color: white;
+		}
+
+		.middle .sidebar .tags{
+			position: relative;
+			left: 0;
+		}
+
+		.middle .sidebar .tags h3{
+			text-align: left;
+			margin-left: 5px;
+			margin-bottom: 5px;
+		}
+
+		.middle .sidebar .tags ul{
+			background: #ccc;
+		}
+
+		.middle .sidebar .tags li{
+			display: inline-block;
+			margin-left: 2px;
+			font-size: 14px;
+			background: white;
+			border-radius: 15px;
+			padding: 5px;
+			margin-bottom: 5px;
+		}
+
+		.middle .sidebar .tags li:hover{
+			background-color: #555;
+			color: white;
+		}
+
+		.middle .content{
+			background: white;
+			float: left;
+			height: 100%;
+			width: 75%;	
+		}
+
+		.middle .content h1{
+			font-family: Courier;
+			font-size: 36px;
+			padding: 1px;
+			margin-top: 20px;
+			margin-bottom: 5px;
+			margin-left: 20px;
+		}
+
+		.middle .content img{
+			padding: 1px;
+			margin-left: 20px;
+			border-top: 1px solid #f2f2f2;
+			border-bottom : 1px solid #f2f2f2; 
+			border-right: 1px solid #f2f2f2;
+			border-left: 1px solid #f2f2f2;
+		}
+
+		.middle .content .comment {
+			font-size: 11px;
+			padding: 1px;
+			margin-top: 2px;
+			margin-left: 65px;
+		}
+
+		.middle .content p{
+			padding: 1px;
+			text-align: justify;
+			margin-left: 20px;
+			margin-right: 50px;
+		}
+
+		.footer{
+			background: #262626;
+			width: 100%;
+			text-align: center;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">			
+		<h1>KOTA DUNIA</h1>
+		<p>Explore The World!</p><img src="bumi.png">
+	</div>
+	<hr>
+	<div class="middle">			
+		<div class="sidebar">
+			<ul>
+				<li><a href="#">Home</a></li>
+	    		<li><a href="#">London</a></li>
+	    		<li><a href="#">Paris</a></li>
+	    		<li><a href="#">Tokyo</a></li>			
+			</ul>
+			<div class="tags">
+				<h3>Tags</h3>
+				<ul>
+					<li>England</li>
+					<li>United Kingdom</li>
+				</ul>
+				<ul>
+					<li>UK</li>
+					<li>Europe</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<h1>London</h1>
+	    	<img src="London.jpg" width="50%">
+	    	<p class="comment">(Source : https://unsplash.com/photos/EXdXLrZXS9Q)</p>
+	    	<p>London adalah ibu kota Inggris dan Britania Raya, merupakan wilayah metropolitan terbesar di Britania Raya. Berlokasi di sepanjang Sungai Thames, London telah menjadi permukiman utama selama dua milenium sejak didirikan oleh Romawi pada abad ke-1 dengan nama Londinium.</p>
+	    	<p>London adalah kota global terkemuka yang unggul dalam bidang seni, bisnis, pendidikan, hiburan, mode, keuangan, kesehatan, media, layanan profesional, penelitian dan pengembangan, pariwisata, serta transportasi. London, bersama dengan New York City, merupakan pusat keuangan terkemuka di dunia, dan menjadi kota dengan PDB terbesar kelima di dunia, atau yang tertinggi di Eropa. Kota ini dikatakan sebagai pusat kebudayaan dunia.</p>
+	    	<p>London terdiri dari beragam masyarakat dan budaya dengan lebih dari 300 bahasa dituturkan oleh berbagai etnis. Pada bulan Maret 2011, London tercatat berpenduduk sebanyak 8.174.100 jiwa, atau sekitar 12,5% dari populasi Britania Raya secara keseluruhan. Hal ini menjadikan London sebagai kota terbesar di Uni Eropa menurut jumlah populasi. Kawasan perkotaan London Raya juga menjadi kawasan urban terbesar kedua (setelah Paris) di Uni Eropa dengan jumlah penduduk 8.278.251 jiwa, sedangkan kawasan metropolitan London adalah yang terbesar di Uni Eropa dengan populasinya yang diperkirakan mencapai 12 hingga 14 juta jiwa. Sebelumnya, London juga pernah menjadi kota dengan populasi terbesar di dunia pada periode 1831-1925.<i>(Wikipedia)</i></p>
+		</div>
+	</div>
+	<div class="footer">Rindang Tavip S. - A12.2018.06053</div>
+</body>
+</html>
